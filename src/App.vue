@@ -1,75 +1,60 @@
 <template>
-  <div class="app">
+  <div>
     <div class="logo">
       <img src="./assets/pokemonlogo.png" alt="Logo" />
+
     </div>
+    <SearchPokedex></SearchPokedex>
+    <PokemonFilter @filters-updated="updateFilters" />
 
-    <main>
-      <div class="search-container">
-        <input v-model="searchKey" type="text" placeholder=" chercher un pokemon" />
 
-        <button @click="search" class="search-button">
-          <font-awesome-icon icon="search" />
-</button>
-
-<button @click="toggleFilters" class="filter-button">
-    Filtre
-    <font-awesome-icon :icon="['fas', 'chevron-down']" />
-  </button>
-
-      </div>
-    </main>
+    
   </div>
+
+<body>  
+ <ThePokemons></ThePokemons>
+</body>
+
+
 </template>
 
 <script>
+import SearchPokedex from "./components/SearchPokedex.vue"
+ import ThePokemons from "./components/ThePokemons.vue";
 
-
+export default {
+  name: 'App',
+  components: {
+    SearchPokedex,
+    ThePokemons,
+    
+},
+}
 </script>
 
 <style>
-.app{
-  background-color: #F17068;
-}
-
 .logo{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 25vh; 
 }
+
 img {
   max-width: 200px;
- 
- 
 }
 
-main {
-  padding: 20px;
-  margin-bottom: 50px;
-
+body {
+  background-color: #F17068;
 }
 
-.search-container {
+
+.pokemon-container {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
 }
 
-input[type="text"] {
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  margin-right: 10px;
-}
 
-.search-button {
-  padding: 10px 20px;
-  background-color: blue;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+ 
 </style>
