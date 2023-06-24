@@ -1,3 +1,5 @@
+
+
 <template>
   <div class="pokemon-card" @mouseover="startAnimation" @mouseout="stopAnimation">
     <div class="card"   :class="{ 'animated': isAnimated }">
@@ -14,6 +16,7 @@
 
 export default {
   name: 'PokemonCard',
+  //Received property: Pokémon object
   props: {
     pokemon: {
       type: Object,
@@ -23,14 +26,17 @@ export default {
 
   data() {
     return {
+      //card animation
       isAnimated: false,
     };
 
   },
   methods: {
+//Method called when mouse hovers over map
     startAnimation() {
       this.isAnimated = true;
     },
+// Method called when mouse leaves map
     stopAnimation() {
       this.isAnimated = false;
     },
@@ -80,10 +86,6 @@ h3{
 
 
 
-
-
-
-
 .pokemon-image {
   width: 180px;
   height: 180px;
@@ -104,7 +106,7 @@ h3{
 
 
 
-/* Styles pour les écrans de petite taille */
+/* small screens */
 @media (max-width: 767px) {
   .pokemon-card {
     width: 50%;
@@ -135,7 +137,7 @@ h3{
 
 
 
-/* Styles pour les écrans de taille moyenne à grande */
+/* medium to large screens */
 @media (min-width: 768px) {
   .pokemon-card {
     width: 200px;

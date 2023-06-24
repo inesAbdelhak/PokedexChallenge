@@ -6,6 +6,7 @@
         <font-awesome-icon icon="search" />
       </button>
     </form>
+    <!-- Display the data of the searched Pokémon -->
     <div v-if="pokemonData">
       <img :src="pokemonData.imageUrl" :alt="pokemonData.name" />
       <h3>{{ pokemonData.name }}</h3>
@@ -18,13 +19,14 @@ export default {
   name: 'SearchPokedex',
   data() {
     return {
-      pokemonData: null,
-      searchKey: '',
+      pokemonData: null, //Searched Pokémon data
+      searchKey: '', //Search key (Pokémon name or ID)
     };
   },
   methods: {
     async searchPokemon() {
       try {
+        // Performs a query to obtain the data of the Pokémon searched for from the API
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${this.searchKey.toLowerCase()}`);
         const pokemon = await response.json();
         this.pokemonData = {
