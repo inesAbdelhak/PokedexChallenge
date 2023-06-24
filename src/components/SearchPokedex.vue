@@ -46,7 +46,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 input[type="text"] {
@@ -58,8 +58,8 @@ input[type="text"] {
 
 .search-button {
   padding: 10px 20px;
-  background-color: blue;
-  color: white;
+  background-color: rgba(243, 239, 10, 0.725);
+  color: rgb(34, 15, 238);
   border: none;
   border-radius: 4px;
   cursor: pointer;

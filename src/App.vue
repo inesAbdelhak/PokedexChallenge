@@ -4,21 +4,22 @@
       <img src="./assets/pokemonlogo.png" alt="Logo" />
 
     </div>
-    <SearchPokedex></SearchPokedex>
-    <PokemonFilter @filters-updated="updateFilters" />
-
+    <SearchPokedex>  </SearchPokedex>  
+     
+    
 
     
   </div>
 
-<body>  
+
  <ThePokemons></ThePokemons>
-</body>
+
 
 
 </template>
 
 <script>
+
 import SearchPokedex from "./components/SearchPokedex.vue"
  import ThePokemons from "./components/ThePokemons.vue";
 
@@ -26,6 +27,7 @@ export default {
   name: 'App',
   components: {
     SearchPokedex,
+   
     ThePokemons,
     
 },
@@ -49,11 +51,6 @@ body {
 }
 
 
-.pokemon-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 
  
