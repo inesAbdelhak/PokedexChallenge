@@ -16,6 +16,7 @@
 <script>
 import { reactive, toRefs, onMounted } from 'vue';
 import PokemonCard from './PokemonCard.vue';
+import { router } from 'vue-router';
 
 export default {
   name: 'ThePokemons',
@@ -62,10 +63,9 @@ export default {
   methods: {
     // How to navigate to a Pokémon's details page
     navigateToDetailsPage(pokemon) {
-  this.$router.push({ name: 'PokemonDetails', params: { id: pokemon.id } });
+  router.push({ name: 'PokemonDetails', params: { id: pokemon.id } });
 }
   }
-
 
 
 

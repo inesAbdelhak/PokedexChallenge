@@ -1,17 +1,42 @@
 <template>
     <div class="pokemon-filter">
       <button class="filter-button">Filtrer</button>
-      <i class="arrow-icon"></i>
+    
       <div class="categories">
-        <!-- Ajoutez vos catégories ici -->
+         <label for="sort">Trier de A à Z:</label>
+      <input type="checkbox" id="sort" v-model="filters.sort">
+        <label for="legendary">Légendaire:</label>
+      <input type="checkbox" id="legendary" v-model="filters.legendary">
       </div>
     </div>
   </template>
   
   <script>
   export default {
-    name: 'PokemonFilter',
-  };
+  name: 'PokemonFilter',
+  data() {
+    return {
+      filters: {
+        legendary: false,
+        sort: false
+      }
+    };
+  },
+  watch: {
+    filters: {
+      handler() {
+        this.applyFilters();
+      },
+      deep: true
+    }
+  },
+  methods: {
+    applyFilters() {
+      
+      this.$emit('filters-applied', this.filters);
+    }
+  }
+};
   </script>
   
   <style scoped>
@@ -57,7 +82,7 @@
     align-items: center;
   }
   
-  /* Ajoutez vos styles pour les catégories ici */
+ 
   
   </style>
   

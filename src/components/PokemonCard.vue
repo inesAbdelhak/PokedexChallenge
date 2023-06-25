@@ -5,7 +5,7 @@
     <div class="card"   :class="{ 'animated': isAnimated }">
       <img :src="pokemon.imageUrl" :alt="pokemon.name" class="pokemon-image" />
       <h3 class="pokemon-name">{{ pokemon.name }}</h3>
-      <router-link :to="'/pokemon/' + pokemon.id" class="button">View details</router-link>
+      <router-link :to="{ name: 'PokemonDetails', params: { id: pokemon.id } }" class="button">View details</router-link>
 
 
     </div>

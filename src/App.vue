@@ -4,14 +4,14 @@
       <img src="./assets/pokemonlogo.png" alt="Logo" />
 
     </div>
-    <SearchPokedex>  </SearchPokedex>  
-     
-    
+    <SearchPokedex>  </SearchPokedex>
+   
+ 
 
     
   </div>
 
-
+   
  <ThePokemons></ThePokemons>
 
 
@@ -22,13 +22,15 @@
 
 import SearchPokedex from "./components/SearchPokedex.vue"
  import ThePokemons from "./components/ThePokemons.vue";
+ 
+
 
 export default {
   name: 'App',
   components: {
     SearchPokedex,
-   
     ThePokemons,
+   
     
 },
 }

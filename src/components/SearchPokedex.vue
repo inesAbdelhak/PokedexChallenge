@@ -7,7 +7,7 @@
       </button>
     </form>
     <!-- Display the data of the searched Pokémon -->
-    <div v-if="pokemonData">
+    <div v-if="pokemonData && pokemonData.name">
       <img :src="pokemonData.imageUrl" :alt="pokemonData.name" />
       <h3>{{ pokemonData.name }}</h3>
     </div>
