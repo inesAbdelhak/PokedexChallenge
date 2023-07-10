@@ -1,6 +1,6 @@
 # Presentation
 
-This web application was created using Vue.js (Vue 3) as part of a recruitment process. For the moment, it hasn't been finalised due to lack of time, but I have every intention of pursuing this project and continuing my personal training with Vue.js and why not React too :)
+This web application was created using Vue.js (Vue 3). For the moment, it hasn't been finalised due to lack of time, but I have every intention of pursuing this project and continuing my personal training with Vue.js and why not React too :)
 
 # Overview
 
